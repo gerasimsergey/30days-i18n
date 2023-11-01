@@ -38,6 +38,11 @@ with col2:
     st.image(Image.open("streamlit-logo-secondary-colormark-darktext.png"))
 st.markdown(_("# 30 Days of Streamlit"))
 
+if st.button('Say hello'):
+     st.write('Why hello there')
+else:
+     st.write('Goodbye')
+
 days_list = [f"Day{x}" for x in md_files]
 
 if query_params:
