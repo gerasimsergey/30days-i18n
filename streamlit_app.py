@@ -103,5 +103,5 @@ for day in days_list:
 
 if st.button('Say hello'):
      st.write('Why hello there')
-else:
-     st.write('Goodbye')
+     st.session_state.day = st.session_state.day + 1
+     update_params()
