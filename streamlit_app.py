@@ -102,6 +102,11 @@ for day in days_list:
                 st.info(f"{df.figure[i]}: {df.caption[i]}")
 
 if st.button('Say hello'):
-     st.write('Why hello there')
-     st.session_state.day = st.session_state.day + 1
-     update_params()
+     
+    #  st.session_state.day = st.session_state.day + 1
+    #  update_params()
+    selected_day = query_params["challenge"][0] + 1
+        if selected_day in days_list:
+            st.session_state.day = selected_day
+    except KeyError:
+        st.session_state.day = days_list[0]
