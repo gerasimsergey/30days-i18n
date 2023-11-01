@@ -38,10 +38,6 @@ with col2:
     st.image(Image.open("streamlit-logo-secondary-colormark-darktext.png"))
 st.markdown(_("# 30 Days of Streamlit"))
 
-if st.button('Say hello'):
-     st.write('Why hello there')
-else:
-     st.write('Goodbye')
 
 days_list = [f"Day{x}" for x in md_files]
 
@@ -104,3 +100,8 @@ for day in days_list:
             for i in range(len(df)):
                 st.image(f"content/{selected_language}/images/{df.img[i]}")
                 st.info(f"{df.figure[i]}: {df.caption[i]}")
+
+if st.button('Say hello'):
+     st.write('Why hello there')
+else:
+     st.write('Goodbye')
